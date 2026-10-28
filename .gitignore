@@ -1,1 +1,6 @@
 server.*
+__pycache__/
+_pages_tmp/
+_backup_assets/
+build.py
+content_*.py

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+<defs><linearGradient id="g13" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a405f"/><stop offset="1" stop-color="#68729d"/></linearGradient></defs>
+<rect width="400" height="250" fill="url(#g13)"/>
+<path d="M-20 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/><path d="M46 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/><path d="M112 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/><path d="M178 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/><path d="M244 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/><path d="M310 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/><path d="M376 0v250" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1"/>
+<circle cx="200" cy="120" r="62" fill="#ffffff" fill-opacity="0.10"/>
+<path d="M150 172c44-10 76-44 98-96-46 14-78 48-98 96z" fill="#ffffff" opacity="0.95"/><path d="M146 178l18-18" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+<rect x="10" y="10" width="380" height="230" rx="14" fill="none" stroke="#ffffff" stroke-opacity="0.16"/>
+</svg>

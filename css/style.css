@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Amiri:wght@400;700&family=Reem+Kufi:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@400;500;600;700&display=swap');
 
 :root {
   --green: #006c35;
+  --green-soft: #eef5f0;
   --bg: #f7f8fa;
   --card: #ffffff;
   --text: #1f1f1f;
-  --text-light: #4f4f4f;
-  --border: #e5e7eb;
+  --text-light: #55595f;
+  --border: #e6e8ec;
+  --shadow: 0 18px 40px -30px rgba(0, 60, 30, 0.55);
 }
 
 * {
@@ -27,7 +29,7 @@ body {
   direction: rtl;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.8;
+  line-height: 1.75;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -36,26 +38,27 @@ img {
   display: block;
 }
 
+/* ===== رأس المدرسة ===== */
 .school-header {
   background: #fff;
   border-bottom: 2px solid var(--green);
 }
 
 .school-header__inner {
-  width: min(1100px, 94vw);
+  width: min(1180px, 94vw);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: clamp(0.6rem, 2vw, 0.8rem) 0;
-  gap: 1rem;
+  padding: clamp(0.5rem, 1.6vw, 0.75rem) 0;
+  gap: 0.8rem;
 }
 
 .school-header__right,
 .school-header__left {
   display: flex;
   align-items: center;
-  gap: clamp(0.6rem, 2vw, 0.9rem);
+  gap: clamp(0.5rem, 1.6vw, 0.8rem);
   flex: 1;
 }
 
@@ -64,18 +67,20 @@ img {
 }
 
 .flag {
-  width: clamp(40px, 8vw, 56px);
+  width: clamp(34px, 6vw, 48px);
   height: auto;
   border: 1px solid var(--border);
+  border-radius: 3px;
 }
 
 .school-header__text {
   display: flex;
   flex-direction: column;
+  line-height: 1.5;
 }
 
 .school-header__ministry {
-  font-size: clamp(0.8rem, 1.6vw, 0.9rem);
+  font-size: clamp(0.72rem, 1.5vw, 0.85rem);
   color: var(--text-light);
 }
 
@@ -87,179 +92,246 @@ img {
 .school-header__name {
   font-family: "Reem Kufi", sans-serif;
   font-weight: 700;
-  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-size: clamp(0.95rem, 2.6vw, 1.3rem);
   color: var(--green);
+  line-height: 1.4;
 }
 
 .emblem {
-  width: clamp(42px, 8vw, 56px);
-  height: clamp(42px, 8vw, 56px);
+  width: clamp(36px, 6vw, 50px);
+  height: clamp(36px, 6vw, 50px);
 }
 
+/* ===== عنوان الصفحة ===== */
 .page-title {
-  padding: clamp(1.2rem, 4vw, 2rem) 1rem clamp(1rem, 3vw, 1.6rem);
+  padding: clamp(1rem, 3.4vw, 1.8rem) 1rem clamp(0.6rem, 2vw, 1rem);
   text-align: center;
 }
 
 .page-title__inner {
-  width: min(900px, 94vw);
+  width: min(820px, 94vw);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.25rem;
 }
 
 .page-title__text {
   font-family: "Reem Kufi", sans-serif;
-  font-size: clamp(1.8rem, 7vw, 3rem);
+  font-size: clamp(1.7rem, 6vw, 2.7rem);
+  line-height: 1.4;
   color: var(--text);
 }
 
 .page-title__sub {
   color: var(--text-light);
-  font-size: clamp(0.98rem, 2vw, 1.08rem);
+  font-size: clamp(0.92rem, 2vw, 1.02rem);
 }
 
 .page-title__note {
-  color: var(--text-light);
-  font-size: clamp(0.9rem, 1.8vw, 0.98rem);
+  color: #7a7f86;
+  font-size: clamp(0.82rem, 1.7vw, 0.9rem);
 }
 
+/* ===== شبكة القصص ===== */
 .main {
-  width: min(1100px, 94vw);
+  width: min(1180px, 94vw);
   margin: 0 auto;
   padding-bottom: clamp(2rem, 6vw, 4rem);
 }
 
+.category-section {
+  margin-top: clamp(1.4rem, 4vw, 2.2rem);
+}
+
+.category-section__head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: clamp(0.8rem, 2.4vw, 1.1rem);
+}
+
+.category-section__title {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: clamp(1.1rem, 3.2vw, 1.45rem);
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.category-section__line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.category-section__count {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  white-space: nowrap;
+}
+
 .stories__grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: clamp(0.8rem, 2.5vw, 1rem);
+  grid-template-columns: 1fr;
+  gap: clamp(0.8rem, 2.4vw, 1.1rem);
+}
+
+@media (min-width: 620px) {
+  .stories__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 940px) {
+  .stories__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .story-card {
-  grid-column: 1 / -1;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: clamp(1rem, 4vw, 1.4rem);
+  border-radius: 14px;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-@media (min-width: 640px) {
-  .story-card {
-    grid-column: span 6;
-  }
-}
-
-@media (min-width: 920px) {
-  .story-card {
-    grid-column: span 4;
-  }
+  transition: box-shadow 0.22s ease, border-color 0.22s ease, transform 0.22s ease;
 }
 
 .story-card:hover {
-  border-color: rgba(0, 108, 53, 0.4);
-  box-shadow: 0 10px 30px -20px rgba(0, 108, 53, 0.8);
+  border-color: rgba(0, 108, 53, 0.35);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
 }
 
-.story-card__type {
+.story-card__cover {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  background: var(--green-soft);
+}
+
+.story-card__body {
+  padding: clamp(0.75rem, 2.2vw, 0.95rem) clamp(0.85rem, 2.4vw, 1.05rem) clamp(0.9rem, 2.4vw, 1.1rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.story-card__category {
+  font-size: clamp(0.74rem, 1.6vw, 0.8rem);
   color: var(--green);
-  font-size: clamp(0.88rem, 1.6vw, 0.94rem);
+  letter-spacing: 0.2px;
 }
 
 .story-card__title {
   font-family: "Amiri", serif;
-  font-size: clamp(1.3rem, 4vw, 1.6rem);
-  line-height: 1.8;
+  font-size: clamp(1.15rem, 3.2vw, 1.32rem);
+  line-height: 1.6;
+  font-weight: 700;
 }
 
 .story-card__excerpt {
   color: var(--text-light);
-  font-size: clamp(0.96rem, 1.8vw, 1rem);
+  font-size: clamp(0.88rem, 2vw, 0.95rem);
+  line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .story-card__more {
   margin-top: auto;
+  padding-top: 0.45rem;
   color: var(--green);
-  font-size: clamp(0.94rem, 1.6vw, 0.98rem);
+  font-size: clamp(0.86rem, 1.8vw, 0.92rem);
 }
 
+/* ===== صفحة القصة ===== */
 .story-topbar {
   background: #fff;
   border-bottom: 1px solid var(--border);
 }
 
 .story-topbar__inner {
-  width: min(900px, 94vw);
+  width: min(860px, 94vw);
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem 0;
+  padding: 0.6rem 0;
 }
 
 .back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.35rem;
   text-decoration: none;
   color: var(--text-light);
+  font-size: 0.9rem;
 }
 
 .back-btn:hover {
-  color: var(--text);
+  color: var(--green);
 }
 
 .story-topbar__title {
   font-family: "Reem Kufi", sans-serif;
   color: var(--green);
+  font-size: 0.95rem;
 }
 
 .main--story {
-  padding-top: clamp(1rem, 4vw, 2rem);
+  padding-top: clamp(0.9rem, 3vw, 1.6rem);
 }
 
 .story-article {
-  width: min(900px, 94vw);
+  width: min(860px, 94vw);
   margin: 0 auto;
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
 }
 
+.story-article__cover {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+}
+
 .story-article__header {
-  padding: clamp(1.4rem, 5vw, 2.4rem) clamp(1.2rem, 6vw, 3rem) clamp(1rem, 4vw, 1.6rem);
+  padding: clamp(1.1rem, 4vw, 1.8rem) clamp(1rem, 5vw, 2.6rem) clamp(0.4rem, 2vw, 0.8rem);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.35rem;
 }
 
 .story-article__type {
   color: var(--green);
+  font-size: 0.88rem;
 }
 
 .story-article__title {
   font-family: "Amiri", serif;
-  font-size: clamp(1.8rem, 8vw, 3rem);
-  line-height: 1.9;
+  font-size: clamp(1.6rem, 6.4vw, 2.4rem);
+  line-height: 1.6;
 }
 
 .story-article__body {
-  padding: 0 clamp(1.2rem, 6vw, 3rem) clamp(1.8rem, 7vw, 3.6rem);
+  padding: 0 clamp(1rem, 5vw, 2.6rem) clamp(1.6rem, 6vw, 2.8rem);
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 3vw, 1.6rem);
+  gap: clamp(0.8rem, 2.4vw, 1.2rem);
   font-family: "Amiri", serif;
-  font-size: clamp(1.16rem, 3vw, 1.38rem);
-  line-height: 2.6;
+  font-size: clamp(1.12rem, 3vw, 1.32rem);
+  line-height: 2.4;
   text-align: justify;
 }
 
@@ -267,34 +339,52 @@ img {
   color: var(--text);
 }
 
+.story-article__footer {
+  padding: 0 clamp(1rem, 5vw, 2.6rem) clamp(1.6rem, 6vw, 2.4rem);
+}
+
+/* ===== التذييل ===== */
 .footer {
   background: #fff;
   border-top: 1px solid var(--border);
+  margin-top: clamp(1rem, 3vw, 2rem);
 }
 
 .footer__inner {
-  width: min(1100px, 94vw);
+  width: min(1180px, 94vw);
   margin: 0 auto;
   text-align: center;
   padding: 1rem 0;
   color: var(--text-light);
-  font-size: clamp(0.9rem, 1.8vw, 0.96rem);
+  font-size: clamp(0.82rem, 1.8vw, 0.92rem);
 }
 
 .footer__note {
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;
+  color: #7a7f86;
 }
 
 @media (max-width: 640px) {
   .school-header__inner {
     flex-direction: column;
     text-align: center;
+    gap: 0.4rem;
   }
+
   .school-header__right,
   .school-header__left {
     justify-content: center;
   }
+
   .school-header__center {
     order: -1;
+  }
+
+  .school-header__left {
+    display: none;
+  }
+
+  .story-article__cover {
+    aspect-ratio: 16 / 9;
   }
 }
